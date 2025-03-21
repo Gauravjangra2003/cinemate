@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export const Header = () => {
   const [hidden, setHidden] = useState(true);
+  const [darkMode, setDarkMode] = useState(true);
 
   const activeClass =
     " text-base block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white";
@@ -12,7 +13,7 @@ export const Header = () => {
 
   return (
     <header>
-      <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+      <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <Link to="/" className="flex items-center">
             <img src={Logo} className="mr-3 h-6 sm:h-9" alt="Cinemate Logo" />
@@ -20,7 +21,8 @@ export const Header = () => {
               Cinemate
             </span>
           </Link>
-          <div className="flex md:order-2">
+
+          <div id="mobile-nav" className="flex md:order-2">
             <button
               onClick={() => setHidden(!hidden)}
               type="button"
@@ -93,11 +95,12 @@ export const Header = () => {
               </svg>
             </button>
           </div>
+
           <div
             className={`${
               hidden ? "hidden" : ""
             } justify-between items-center w-full md:flex md:w-auto md:order-1`}
-            id="navbar-search"
+            id="nav-link"
           >
             <div className="relative mt-3 md:hidden">
               <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
