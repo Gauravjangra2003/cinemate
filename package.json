@@ -38,11 +38,14 @@
     ]
   },
   "overrides": {
-    "svgo" : {
-      "nth-check" :  "2.1.1"
+    "svgo": {
+      "nth-check": "2.1.1"
     },
-    "resolve-url-loader" : {
-      "postcss" : "8.5.3"
+    "resolve-url-loader": {
+      "postcss": "8.5.3"
     }
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
   }
 }
