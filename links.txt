@@ -1,4 +1,4 @@
-API Key: 3b1bbc53ec426f958a2074ae54a5100d
+API Key: b80d59c33d6d57ed9c7e3713f91c188a
 Base URL: https://api.themoviedb.org/3
 
 Individual:
